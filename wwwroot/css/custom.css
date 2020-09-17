@@ -4,7 +4,7 @@
 }
 
 #profile-pic {
-    background: url('/img/profile.jpg') center center no-repeat;
+    background: url('https://raw.githubusercontent.com/beausmyth1990/eResume/master/wwwroot/img/profile.jpg') center center no-repeat;
     height: 60vh;
     background-size: cover;
     background-position-y: top;
