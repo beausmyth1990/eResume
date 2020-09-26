@@ -1,89 +1,177 @@
-﻿@page "/"
+﻿@using BlazorUIComponents.Container;
+@using BlazorUIComponents.Img;
+@using BlazorUIComponents.nav;
+@page "/"
 
-<BlazorUIComponents.Container.LazyLoad Class="lazy-container mobile-only">
-    <div class="row">
-        <div class="col-md-3 order-last align-self-center" style="padding: 0px">
-            <BlazorUIComponents.Img.LazyLoad Class="lazy-img img-full-height" LazyLoadSrc="https://raw.githubusercontent.com/beausmyth1990/eResume/master/wwwroot/img/profile.jpg"
-                                              PlaceHolderSrc="https://raw.githubusercontent.com/beausmyth1990/eResume/master/wwwroot/img/ph-sm.png"/>
+<NavBarResponsive SamePageNav="true" Class="navbar-header" Links="@Links">
+    <LinkTemplate>
+        <NavLink @onclick:preventDefault class="@context.Class" href="@context.Href"><span>@context.Title</span></NavLink>
+    </LinkTemplate>
+    <ToggleContent>
+        <div id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="col-md-9" style="padding: 1em">
-            <h5>About Me</h5>
-            <p>My name is Beau. I am a Web Developer whos works mostly with C# and Blazor, but I will learn whatever languages and frameworks I need to to get the job done right.</p>
-            <p>Feel free to checkout this eResume of mine. If you feel like I would be a good fit your workplace/ team then don't hesitate to reach out. I am always happy to chat.</p>
-            <ul class="nav flex-column info-list">
-                <li class="nav-item">
-                    <a href="tel:0431726991">
-                        <span class="oi oi-phone"></span> 043 172 6991
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="mailto:beau.smyth@outlook.com">
-                        <span class="oi oi-envelope-closed"></span> beau.smyth@outlook.com
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a target="_blank" href="@(@"https://www.google.com/maps/place/Brisbane+QLD/@-27.3818631,152.7130055,10z/data=!3m1!4b1!4m5!3m4!1s0x6b91579aac93d233:0x402a35af3deaf40!8m2!3d-27.4697707!4d153.0251235")">
-                        <span class="oi oi-location"></span> Brisbane
-                    </a>
-                </li>
-            </ul>
-        </div>
+    </ToggleContent>
+</NavBarResponsive>
+
+
+<!---->
+<!-- Header -->
+<div class="section" id="header">
+    <div class="s-content header">
+        <BlazorUIComponents.Img.LazyLoad PlaceHolderSrc="@(_imgHost + "header-img-laptop-coffee-compressed.jpg" + _suffix)" LazyLoadSrc="@(_imgHost + "header-img-laptop-coffee.jpg" + _suffix)">
+            <h1 style="margin-bottom: 1em">{ Beau Smyth }</h1>
+            <h4>#dev #programmer #livetocode</h4>
+        </BlazorUIComponents.Img.LazyLoad>
     </div>
-</BlazorUIComponents.Container.LazyLoad>
+</div>
+<!-- About Me -->
+<div class="section" id="about-me">
+    <BlazorUIComponents.Container.LazyLoad Class="s-content" ClassInView="in-view">
+        <h2 class="section-heading">About Me</h2>
+        <h5 class="section-subheading">
+            <span>Passionate</span>
+            <span class="separator">.</span>
+            <span>Curious</span>
+            <span class="separator">.</span>
+            <span>Determined</span>
 
-<BlazorUIComponents.Container.LazyLoad>
+        </h5>
+        <div class="col-30-70">
+            <div>
+                <BlazorUIComponents.Img.LazyLoad Class="lazy-img-container md-img" PlaceHolderSrc="@GetFullImgPath("me-img-compress.jpg")" LazyLoadSrc="@GetFullImgPath("me-img.jpg")" />
+            </div>
+            <div>
+                <p>Software Developer, specializing in Web Development.</p>
 
-    <div class="row">
-        <div class="col-md-3 order-last align-self-center" style="padding: 0px">
-            <BlazorUIComponents.Img.LazyLoad Class="lazy-img img-full-height" LazyLoadSrc="https://raw.githubusercontent.com/beausmyth1990/eResume/master/wwwroot/img/winner.png"
-                                              PlaceHolderSrc="https://raw.githubusercontent.com/beausmyth1990/eResume/master/wwwroot/img/ph-sm.png"/>
+                <p>Enjoys sharing intelligent conversations with like-minded people.</p>
+
+                <p>A goal-driven, self-motivated learner with a keen eye for detail.</p>
+
+                <p>A love for all things programming. Very interested in Web and VR development and wish to look into Data Science in the future.</p>
+
+                <p>Hobbies include running, calesthenics, yoga and VR gaming.</p>
+            </div>
         </div>
-        <div class="col-md-9" style="padding: 1em">
-            <h5>Career Goals</h5>
-            <p>To become the most proficient Software Developer I can be. I would like to initially (post grad) work in Web Development and eventually make my way into Data Science. I feel that these two industries have the power to shape the future, and I want to help shape it for the better.</p>
+    </BlazorUIComponents.Container.LazyLoad>
+</div>
+<!-- Skills -->
+<div class="section" id="skills">
+    <BlazorUIComponents.Container.LazyLoad Class="s-content" ClassInView="in-view">
+        <h2 class="section-heading">Skills</h2>
+        <h5 class="section-subheading">
+            <span>Web</span>
+            <span class="separator">.</span>
+            <span>Design</span>
+            <span class="separator">.</span>
+            <span>Development</span>
 
+        </h5>
+        <div class="col-30-70">
+            <div>
+                PHP
+            </div>
+            <div>
+                <SkillBar SkillPercent="45" />
+            </div>
         </div>
+        <div class="col-30-70">
+            <div>
+                CSS
+            </div>
+            <div>
+                <SkillBar SkillPercent="60" />
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                HTML
+            </div>
+            <div>
+                <SkillBar SkillPercent="30" />
+            </div>
+        </div>
+    </BlazorUIComponents.Container.LazyLoad>
+</div>
+<!-- Experience -->
+<div class="section" id="experience">
+    <BlazorUIComponents.Container.LazyLoad Class="s-content" ClassInView="in-view">
+        <h2 class="section-heading">Experience</h2>
+        <div class="col-30-70">
+            <div>
+                <BlazorUIComponents.Img.LazyLoad Class="lazy-img-container md-img" PlaceHolderSrc="@GetFullImgPath("aa-logo-compress.jpg")" LazyLoadSrc="@GetFullImgPath("aa-logo.jpg")" />
+            </div>
+            <div>
+                <h3>Almost Anything Web & Graphic Design</h3>
+                <h5 style="margin-bottom: 1em; color: gray">Website & Web Application Developer (2017-2018)</h5>
+                <ul style="list-style: square; margin-left: 2em">
+                    <li>Developed and designed WordPress templates and custom plugins</li>
+                    <li>Worked with WordPress and LAMP stack as well as CakePHP and jQuery</li>
+                </ul>
+                <p style="margin-top: 1em">During my time at Almost Anything I developed a deep understanding of PHP, CSS and HTML. I learnt about what GitLab is and how to use it for version control.</p>
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                <BlazorUIComponents.Img.LazyLoad Class="lazy-img-container md-img bordered" PlaceHolderSrc="@GetFullImgPath("cc-logo-compress.jpg")" LazyLoadSrc="@GetFullImgPath("cc-logo.png")" />
+            </div>
+            <div>
+                <h3>CentacareCQ</h3>
+                <h5 style="margin-bottom: 1em; color: gray">Intern Web Developer (2020)</h5>
+                <ul style="list-style: square; margin-left: 2em">
+                    <li>Responsible for developing data-reporting Application</li>
+                </ul>
+                <p style="margin-top: 1em">During my time at CentacareCQ I learnt about C#, .NET Core and Blazor. I used Blazer Server-Side to develop an on-premise-hosted application for employees to produce data-reports form a range of different organisation data sources.</p>
+            </div>
+        </div>
+    </BlazorUIComponents.Container.LazyLoad>
+</div>
+<!-- Education -->
+<div class="section" id="education">
+    <div class="s-content">
+        <h2 class="section-heading">Education</h2>
+
     </div>
-</BlazorUIComponents.Container.LazyLoad>
+</div>
+<!-- References -->
+<div class="section" id="references">
+    <div class="s-content">
+        <h2 class="section-heading">References</h2>
 
-<BlazorUIComponents.Container.LazyLoad>
-    <div class="row">
-        <div class="col-md-3 order-last align-self-center" style="padding: 0px">
-            <BlazorUIComponents.Img.LazyLoad Class="lazy-img img-full-height" LazyLoadSrc="https://raw.githubusercontent.com/beausmyth1990/eResume/master/wwwroot/img/games.png"
-                                             PlaceHolderSrc="https://raw.githubusercontent.com/beausmyth1990/eResume/master/wwwroot/img/ph-sm.png" />
-        </div>
-        <div class="col-md-9" style="padding: 1em">
-            <h5>Hobbies</h5>
-            <p>In my spare time I enjoy coding (learning and personal projects), Yoga, Calisthenics, and some light gaming. I also enjoy venturing out to try new vegan food.</p>
-        </div>
     </div>
-</BlazorUIComponents.Container.LazyLoad>
+</div>
+<!-- Contact -->
+<div class="section" id="contact">
+    <div class="s-content">
+        <h2 class="section-heading">Contact</h2>
 
-<BlazorUIComponents.Container.LazyLoad>
-    <div class="row">
-        <div class="col-md-3 order-last align-self-center" style="padding: 0px">
-            <BlazorUIComponents.Img.LazyLoad Class="lazy-img img-full-height" LazyLoadSrc="https://raw.githubusercontent.com/beausmyth1990/eResume/master/wwwroot/img/person.png"
-                                             PlaceHolderSrc="https://raw.githubusercontent.com/beausmyth1990/eResume/master/wwwroot/img/ph-sm.png" />
-        </div>
-        <div class="col-md-9" style="padding: 1em">
-            <h5>Personal Life</h5>
-            <p>I am a fun, friendly guy who loves a good chat, especially if it's to do with anything tech related.</p>
-
-        </div>
     </div>
-</BlazorUIComponents.Container.LazyLoad>
+</div>
 
-<BlazorUIComponents.Container.LazyLoad>
-    <div class="row">
-        <div class="col-md-3 order-last align-self-center" style="padding: 0px">
-            <BlazorUIComponents.Img.LazyLoad Class="lazy-img img-full-height" LazyLoadSrc="https://raw.githubusercontent.com/beausmyth1990/eResume/master/wwwroot/img/work.png"
-                                             PlaceHolderSrc="https://raw.githubusercontent.com/beausmyth1990/eResume/master/wwwroot/img/ph-sm.png" />
-        </div>
-        <div class="col-md-9" style="padding: 1em">
-            <h5>Professional Development</h5>
-            <p>I am a big believer in life-long learning and self-improvement. Therefore, I plan on taking any and all opportunities to increase my knowledge, expand my skill-set and broaden my horizons in the field of software development.</p>
 
-        </div>
-    </div>
-</BlazorUIComponents.Container.LazyLoad>
+@code{
+    string _imgHost = @"https://github.com/beausmyth1990/ImagesForTesting/blob/master/";
+    string _suffix = @"?raw=true";
+    IReadOnlyList<NavLinkModel> Links;
 
+    protected override void OnInitialized()
+    {
+        Links = new List<NavLinkModel> {
+            new NavLinkModel("nav-link header", "#header", ""),
+            new NavLinkModel("nav-link", "#about-me", "About Me"),
+            new NavLinkModel("nav-link", "#skills", "Skills"),
+            new NavLinkModel("nav-link", "#experience", "Experience"),
+            new NavLinkModel("nav-link", "#education", "Education"),
+            new NavLinkModel("nav-link", "#references", "References"),
+            new NavLinkModel("nav-link", "#contact", "Contact"),
+        };
+    }
+
+    string GetFullImgPath(string imgTitle)
+    {
+        return $"{_imgHost}{imgTitle}{_suffix}";
+    }
+}
