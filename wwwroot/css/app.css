@@ -416,6 +416,10 @@ a:hover {
         display: none
     }
 
+    .s-content.header .lazy-img-container{
+        background-attachment: scroll !important;
+    }
+
     .s-content.header .lazy-img-container div {
         padding: 1em;
     }
@@ -424,16 +428,16 @@ a:hover {
         display: block;
     }
 
-        .section-heading::after {
-            display: block;
-            margin: auto;
-            width: 3em;
-            margin-top: 5px;
-        }
+    .section-heading::after {
+        display: block;
+        margin: auto;
+        width: 3em;
+        margin-top: 5px;
+    }
 
-        .section-heading::before {
-            display: none;
-        }
+    .section-heading::before {
+        display: none;
+    }
 
     .section {
         padding-top: 4em;
@@ -448,10 +452,10 @@ a:hover {
         display: block;
     }
 
-        .col-30-70 > :first-child {
-            width: 100%;
-            text-align: center;
-        }
+    .col-30-70 > :first-child {
+        width: 100%;
+        text-align: center;
+    }
 
     .lazy-img-container.md-img {
         display: block;
