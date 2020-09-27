@@ -2,9 +2,12 @@
 <div class="skill-bar-container">
     <div class="skill-bar"></div>
     <div class="skill-indicator" style="width: @(SkillPercent)%; background: @(SkillPercent >= 0 && SkillPercent < 40 ? lowSkillCol : SkillPercent >= 40 && SkillPercent < 60 ? midSkillCol : highSKillCol )"></div>
+    <div class="skill-dial" style="left: calc(@(SkillPercent)% - @(_skillDialWidth)px)"></div>
 </div>
 
 @code {
+    int _skillDialWidth = 10;
+
     string lowSkillCol = "red";
     string midSkillCol = "orange";
     string highSKillCol = "green";

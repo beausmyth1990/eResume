@@ -23,7 +23,7 @@
 <div class="section" id="header">
     <div class="s-content header">
         <BlazorUIComponents.Img.LazyLoad PlaceHolderSrc="@(_imgHost + "header-img-laptop-coffee-compressed.jpg" + _suffix)" LazyLoadSrc="@(_imgHost + "header-img-laptop-coffee.jpg" + _suffix)">
-            <h1 style="margin-bottom: 1em">{ Beau Smyth }</h1>
+            <h1 style="margin-bottom: 1em">Beau Smyth</h1>
             <h4>#dev #programmer #livetocode</h4>
         </BlazorUIComponents.Img.LazyLoad>
     </div>
@@ -62,20 +62,20 @@
 <div class="section" id="skills">
     <BlazorUIComponents.Container.LazyLoad Class="s-content" ClassInView="in-view">
         <h2 class="section-heading">Skills</h2>
-        <h5 class="section-subheading">
-            <span>Web</span>
-            <span class="separator">.</span>
-            <span>Design</span>
-            <span class="separator">.</span>
-            <span>Development</span>
-
-        </h5>
+        <div class="col-30-70">
+            <div>
+                <BlazorUIComponents.Img.LazyLoad Class="lazy-img-container sm-img" PlaceHolderSrc="@GetFullImgPath("coding-icon.png")" LazyLoadSrc="@GetFullImgPath("coding-icon.png")" />
+            </div>
+            <div>
+                <h3 class="section-subheading">Languages</h3>
+            </div>
+        </div>
         <div class="col-30-70">
             <div>
                 PHP
             </div>
             <div>
-                <SkillBar SkillPercent="45" />
+                <SkillBar SkillPercent="80" />
             </div>
         </div>
         <div class="col-30-70">
@@ -83,7 +83,7 @@
                 CSS
             </div>
             <div>
-                <SkillBar SkillPercent="60" />
+                <SkillBar SkillPercent="80" />
             </div>
         </div>
         <div class="col-30-70">
@@ -91,7 +91,79 @@
                 HTML
             </div>
             <div>
-                <SkillBar SkillPercent="30" />
+                <SkillBar SkillPercent="95" />
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                C
+            </div>
+            <div>
+                <SkillBar SkillPercent="50" />
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                C#
+            </div>
+            <div>
+                <SkillBar SkillPercent="65" />
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                Java
+            </div>
+            <div>
+                <SkillBar SkillPercent="70" />
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                JavaScript
+            </div>
+            <div>
+                <SkillBar SkillPercent="65" />
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                <BlazorUIComponents.Img.LazyLoad Class="lazy-img-container sm-img" PlaceHolderSrc="@GetFullImgPath("framework-icon.png")" LazyLoadSrc="@GetFullImgPath("framework-icon.png")" />
+            </div>
+            <div>
+                <h3 class="section-subheading">Frameworks</h3>
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                NodeJS
+            </div>
+            <div>
+                <SkillBar SkillPercent="45" />
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                Blazor
+            </div>
+            <div>
+                <SkillBar SkillPercent="60" />
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                <BlazorUIComponents.Img.LazyLoad Class="lazy-img-container sm-img" PlaceHolderSrc="@GetFullImgPath("tools-icon.png")" LazyLoadSrc="@GetFullImgPath("tools-icon.png")" />
+            </div>
+            <div>
+                <h3 class="section-subheading">Tools</h3>
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                GitHub
+            </div>
+            <div>
+                <SkillBar SkillPercent="60" />
             </div>
         </div>
     </BlazorUIComponents.Container.LazyLoad>
@@ -131,24 +203,68 @@
 </div>
 <!-- Education -->
 <div class="section" id="education">
-    <div class="s-content">
+    <BlazorUIComponents.Container.LazyLoad Class="s-content" ClassInView="in-view">
         <h2 class="section-heading">Education</h2>
-
-    </div>
-</div>
-<!-- References -->
-<div class="section" id="references">
-    <div class="s-content">
-        <h2 class="section-heading">References</h2>
-
-    </div>
+        <div class="col-30-70">
+            <div>
+                <BlazorUIComponents.Img.LazyLoad Class="lazy-img-container md-img" PlaceHolderSrc="@GetFullImgPath("cqu-logo-compress.jpg")" LazyLoadSrc="@GetFullImgPath("cqu-logo.jpeg")" />
+            </div>
+            <div>
+                <h3>Bachelor of Information Technology - Application Development Major</h3>
+                <h5 style="margin-bottom: 1em; color: gray">Earned Nov 2020</h5>
+                <p style="margin-top: 1em">
+                    Transferred over from Electrical Engineering in second year after falling in love with programming.
+                    I knew that I had found my calling in I.T.
+                </p>
+                <a target="_blank" href="@GetFullImgPath("transcript_Sep2020.pdf")">Transcript</a>
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                <BlazorUIComponents.Img.LazyLoad Class="lazy-img-container md-img bordered" PlaceHolderSrc="@GetFullImgPath("cqu-logo-compress.jpg")" LazyLoadSrc="@GetFullImgPath("cqu-logo.jpeg")" />
+            </div>
+            <div>
+                <h3>STEPS (Skills for Tertiary Education Preparatory Studies) Certificate of Graduation</h3>
+                <h5 style="margin-bottom: 1em; color: gray">Earned Nov 2014</h5>
+                <p style="margin-top: 1em">Being a mature-age student meant that I was required to undertake a bridging course to brush-up on prerequisite knowledge for Engineering. The STEPS course offered by CQUnivserity was my gateway to teriary education. I enjoyed every second of it. Made many good friends along the way.</p>
+                <a target="_blank" href="@GetFullImgPath("transcript_Sep2020.pdf")">Transcript</a>
+            </div>
+        </div>
+    </BlazorUIComponents.Container.LazyLoad>
 </div>
 <!-- Contact -->
 <div class="section" id="contact">
-    <div class="s-content">
+    <BlazorUIComponents.Container.LazyLoad Class="s-content" ClassInView="in-view">
         <h2 class="section-heading">Contact</h2>
-
-    </div>
+        <div class="col-30-70">
+            <div>
+                <a href="tel:043 172 6991"><BlazorUIComponents.Img.LazyLoad Class="lazy-img-container sm-img" PlaceHolderSrc="@GetFullImgPath("phone.png")" LazyLoadSrc="@GetFullImgPath("phone.png")" /></a>
+</div>
+            <div class="contact-detail">
+                <a href="tel:043 172 6991"><h5>043 172 6991</h5></a>
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                <a href="mailto:beau.smyth@outlook.com"><BlazorUIComponents.Img.LazyLoad Class="lazy-img-container sm-img" PlaceHolderSrc="@GetFullImgPath("email.png")" LazyLoadSrc="@GetFullImgPath("email.png")" /></a>
+</div>
+            <div class="contact-detail">
+                <a href="mailto:beau.smyth@outlook.com"><h5>beau.smyth@outlook.com</h5></a>
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                <a target="_blank" href="https://www.google.com/maps/place/Brisbane+QLD"><BlazorUIComponents.Img.LazyLoad Class="lazy-img-container sm-img" PlaceHolderSrc="@GetFullImgPath("pin.png")" LazyLoadSrc="@GetFullImgPath("pin.png")" /></a>
+</div>
+            <div class="contact-detail">
+                <a target="_blank" href="https://www.google.com/maps/place/Brisbane+QLD"><h5>Brisbane, QLD, AU</h5></a>
+            </div>
+        </div>
+        <div class="social-media-links">
+            <a target="_blank" href="https://github.com/beausmyth1990"><BlazorUIComponents.Img.LazyLoad Class="lazy-img-container sm-img" PlaceHolderSrc="@GetFullImgPath("github.png")" LazyLoadSrc="@GetFullImgPath("github.png")" /></a>
+            <a target="_blank" href="https://www.linkedin.com/in/beau-smyth-131607134/"><BlazorUIComponents.Img.LazyLoad Class="lazy-img-container sm-img" PlaceHolderSrc="@GetFullImgPath("linkedin.png")" LazyLoadSrc="@GetFullImgPath("linkedin.png")" /></a>
+        </div>
+    </BlazorUIComponents.Container.LazyLoad>
 </div>
 
 
@@ -165,7 +281,6 @@
             new NavLinkModel("nav-link", "#skills", "Skills"),
             new NavLinkModel("nav-link", "#experience", "Experience"),
             new NavLinkModel("nav-link", "#education", "Education"),
-            new NavLinkModel("nav-link", "#references", "References"),
             new NavLinkModel("nav-link", "#contact", "Contact"),
         };
     }
