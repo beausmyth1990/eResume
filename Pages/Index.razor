@@ -32,26 +32,20 @@
 <div class="section" id="about-me">
     <BlazorUIComponents.Container.LazyLoad Class="s-content" ClassInView="in-view">
         <h2 class="section-heading">About Me</h2>
-        <h5 class="section-subheading">
-            <span>Passionate</span>
-            <span class="separator">.</span>
-            <span>Curious</span>
-            <span class="separator">.</span>
-            <span>Determined</span>
-
-        </h5>
         <div class="col-30-70">
             <div>
                 <BlazorUIComponents.Img.LazyLoad Class="lazy-img-container md-img" PlaceHolderSrc="@GetFullImgPath("me-img-compress.jpg")" LazyLoadSrc="@GetFullImgPath("me-img.jpg")" />
             </div>
             <div>
+                <span class="pill">Passionate</span>
+                <span class="pill">Curious</span>
+                <span class="pill">Determined</span>
+                <span class="pill">Ambitious</span>
                 <p>Software Developer, specializing in Web Development.</p>
 
-                <p>Enjoys sharing intelligent conversations with like-minded people.</p>
+                <p>Goal-driven and self-motivated learner with a keen eye for detail.</p>
 
-                <p>A goal-driven, self-motivated learner with a keen eye for detail.</p>
-
-                <p>A love for all things programming. Very interested in Web and VR development and wish to look into Data Science in the future.</p>
+                <p>Love for all things programming. Very interested in Web and VR development and wish to look into Data Science in the future.</p>
 
                 <p>Hobbies include running, calesthenics, yoga and VR gaming.</p>
             </div>
@@ -72,58 +66,47 @@
         </div>
         <div class="col-30-70">
             <div>
-                PHP
+                <h4>PHP/HTML/CSS</h4>
             </div>
             <div>
-                <SkillBar SkillPercent="80" />
-            </div>
-        </div>
-        <div class="col-30-70">
-            <div>
-                CSS
-            </div>
-            <div>
-                <SkillBar SkillPercent="80" />
+                <SkillBar SkillPercent="85"
+                          Description="As a Web Developer my employer used LAMP stack. During this time I was responsible for developing custom WordPress plugins and templates for our clients." />
             </div>
         </div>
         <div class="col-30-70">
             <div>
-                HTML
+                <h4>SQL</h4>
             </div>
             <div>
-                <SkillBar SkillPercent="95" />
-            </div>
-        </div>
-        <div class="col-30-70">
-            <div>
-                C
-            </div>
-            <div>
-                <SkillBar SkillPercent="50" />
+                <SkillBar SkillPercent="70"
+                          Description="Well versed, mostly in MySQL, as this was the DBMS used by my employer. I would develop schemas and complex queries for WordPress plugins and Web Applications." />
             </div>
         </div>
         <div class="col-30-70">
             <div>
-                C#
+                <h4>C#</h4>
             </div>
             <div>
-                <SkillBar SkillPercent="65" />
-            </div>
-        </div>
-        <div class="col-30-70">
-            <div>
-                Java
-            </div>
-            <div>
-                <SkillBar SkillPercent="70" />
+                <SkillBar SkillPercent="65"
+                          Description="Learnt during university for an internship, in which I was required to develop a data reporting application for the host organisation using Blazor server-side. If I had to choose a favourite language so far C# would be it." />
             </div>
         </div>
         <div class="col-30-70">
             <div>
-                JavaScript
+                <h4>Java</h4>
             </div>
             <div>
-                <SkillBar SkillPercent="65" />
+                <SkillBar SkillPercent="70"
+                          Description="Learnt during university for use in my programming courses. Java is CQUniversity’s language of choice for teaching undergrad students how to program." />
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                <h4>JavaScript</h4>
+            </div>
+            <div>
+                <SkillBar SkillPercent="65"
+                          Description="Mostly self-taught. I used a lot of jQuery as a Web Developer for AJAX operations such as front-end form validation and long polling to have real-time server updates reflected client-side." />
             </div>
         </div>
         <div class="col-30-70">
@@ -136,18 +119,47 @@
         </div>
         <div class="col-30-70">
             <div>
-                NodeJS
+                <h4>NodeJS</h4>
             </div>
             <div>
-                <SkillBar SkillPercent="45" />
+                <SkillBar SkillPercent="45"
+                          Description="Self-taught. I have read a couple of textbooks on how to use it and dabbled in Node development for a few months. I enjoyed it immensely but was forced to stop so I could begin learning C# for my internship." />
             </div>
         </div>
         <div class="col-30-70">
             <div>
-                Blazor
+                <h4>Blazor</h4>
             </div>
             <div>
-                <SkillBar SkillPercent="60" />
+                <SkillBar SkillPercent="60"
+                          Description="Self-taught. I learnt this shiny, new SPA framework from Microsoft for my final semester at Uni. It was required for a 10-week paid internship with a local organisation where I was tasked with developing an on-premise-hosted data reporting application." />
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                <h4>CakePHP</h4>
+            </div>
+            <div>
+                <SkillBar SkillPercent="60"
+                          Description="As a web developer I would often need to update and maintain legacy applications, a large one of which was built on CakePHP. I learnt how CakePHP works and how to use it by reading legacy code and their official documentation." />
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                <h4>Wordpress</h4>
+            </div>
+            <div>
+                <SkillBar SkillPercent="70"
+                          Description="Most projects were centred around WordPress during my time as a web developer. It might not be the best framework for every use-case, but it's a fantastic tool to work with. I built many custom plugins and templates for our clients, all of which are still in commercial use today." />
+            </div>
+        </div>
+        <div class="col-30-70">
+            <div>
+                <h4>Bootstrap</h4>
+            </div>
+            <div>
+                <SkillBar SkillPercent="80"
+                          Description="Mostly self-taught. I have used this framework mostly for university and personal projects. It's very simple to use and is effective for rapid development." />
             </div>
         </div>
         <div class="col-30-70">
@@ -160,10 +172,11 @@
         </div>
         <div class="col-30-70">
             <div>
-                GitHub
+                <h4>GitHub</h4>
             </div>
             <div>
-                <SkillBar SkillPercent="60" />
+                <SkillBar SkillPercent="60"
+                          Description="I was required to learn Git during my time as a web developer as all our project source code was stored in GitHub. This, by far, has been the most useful tool I have learnt for software development. I would recommend to any developer to learn this as early in his/her career as possible." />
             </div>
         </div>
     </BlazorUIComponents.Container.LazyLoad>
@@ -181,7 +194,10 @@
                 <h5 style="margin-bottom: 1em; color: gray">Website & Web Application Developer (2017-2018)</h5>
                 <ul style="list-style: square; margin-left: 2em">
                     <li>Developed and designed WordPress templates and custom plugins</li>
-                    <li>Worked with WordPress and LAMP stack as well as CakePHP and jQuery</li>
+                    <li>Worked closely with clients and our Creative Director to produce effective, web-based business solutions.</li>
+                    <li>Maintained and upgraded legacy applications and websites.</li>
+                    <li>Proactive with learning new skills and technologies suitable for the job/project at hand.</li>
+                    <li>Worked efficiently and autonomously, and always sought-out clarification when in doubt</li>
                 </ul>
                 <p style="margin-top: 1em">During my time at Almost Anything I developed a deep understanding of PHP, CSS and HTML. I learnt about what GitLab is and how to use it for version control.</p>
             </div>
@@ -195,6 +211,8 @@
                 <h5 style="margin-bottom: 1em; color: gray">Intern Web Developer (2020)</h5>
                 <ul style="list-style: square; margin-left: 2em">
                     <li>Responsible for developing data-reporting Application</li>
+                    <li>Reported to the Manager of IT with regular project updates</li>
+                    <li>Worked closely with organisation employees to illicit functional and non-functional requirements and user feedback during testing.</li>
                 </ul>
                 <p style="margin-top: 1em">During my time at CentacareCQ I learnt about C#, .NET Core and Blazor. I used Blazer Server-Side to develop an on-premise-hosted application for employees to produce data-reports form a range of different organisation data sources.</p>
             </div>
@@ -239,7 +257,7 @@
         <div class="col-30-70">
             <div>
                 <a href="tel:043 172 6991"><BlazorUIComponents.Img.LazyLoad Class="lazy-img-container sm-img" PlaceHolderSrc="@GetFullImgPath("phone.png")" LazyLoadSrc="@GetFullImgPath("phone.png")" /></a>
-</div>
+            </div>
             <div class="contact-detail">
                 <a href="tel:043 172 6991"><h5>043 172 6991</h5></a>
             </div>
@@ -247,7 +265,7 @@
         <div class="col-30-70">
             <div>
                 <a href="mailto:beau.smyth@outlook.com"><BlazorUIComponents.Img.LazyLoad Class="lazy-img-container sm-img" PlaceHolderSrc="@GetFullImgPath("email.png")" LazyLoadSrc="@GetFullImgPath("email.png")" /></a>
-</div>
+            </div>
             <div class="contact-detail">
                 <a href="mailto:beau.smyth@outlook.com"><h5>beau.smyth@outlook.com</h5></a>
             </div>
@@ -255,7 +273,7 @@
         <div class="col-30-70">
             <div>
                 <a target="_blank" href="https://www.google.com/maps/place/Brisbane+QLD"><BlazorUIComponents.Img.LazyLoad Class="lazy-img-container sm-img" PlaceHolderSrc="@GetFullImgPath("pin.png")" LazyLoadSrc="@GetFullImgPath("pin.png")" /></a>
-</div>
+            </div>
             <div class="contact-detail">
                 <a target="_blank" href="https://www.google.com/maps/place/Brisbane+QLD"><h5>Brisbane, QLD, AU</h5></a>
             </div>
@@ -266,7 +284,6 @@
         </div>
     </BlazorUIComponents.Container.LazyLoad>
 </div>
-
 
 @code{
     string _imgHost = @"https://github.com/beausmyth1990/ImagesForTesting/blob/master/";

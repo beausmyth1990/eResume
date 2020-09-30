@@ -1,9 +1,15 @@
 ﻿
-<div class="skill-bar-container">
-    <div class="skill-bar"></div>
-    <div class="skill-indicator" style="width: @(SkillPercent)%; background: @(SkillPercent >= 0 && SkillPercent < 40 ? lowSkillCol : SkillPercent >= 40 && SkillPercent < 60 ? midSkillCol : highSKillCol )"></div>
-    <div class="skill-dial" style="left: calc(@(SkillPercent)% - @(_skillDialWidth)px)"></div>
-</div>
+<BlazorUIComponents.Container.LazyLoad Class="lazy-skillbar">
+    <div class="skill-detail">
+        <p>@Description</p>
+        <p class="pill skill-level">@(SkillPercent >= 0 && SkillPercent < 33 ? "Beginner" : (SkillPercent >= 33 && SkillPercent < 66 ? "Intermediate" : "Advanced"))</p>
+    </div>
+    <div class="skill-bar-container">
+        <div class="skill-bar"></div>
+        <div class="skill-indicator" style="width: @(SkillPercent)%; background: @(SkillPercent >= 0 && SkillPercent < 40 ? lowSkillCol : SkillPercent >= 40 && SkillPercent < 60 ? midSkillCol : highSKillCol )"></div>
+        <div class="skill-dial" style="left: calc(@(SkillPercent)% - @(_skillDialWidth)px)"></div>
+    </div>
+</BlazorUIComponents.Container.LazyLoad>
 
 @code {
     int _skillDialWidth = 10;
@@ -12,5 +18,6 @@
     string midSkillCol = "orange";
     string highSKillCol = "green";
     [Parameter] public int SkillPercent { get; set; }
+    [Parameter] public string Description { get; set; } = "Some description of my current skill level for this particular skill";
 
 }

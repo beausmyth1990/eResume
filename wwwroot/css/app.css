@@ -24,22 +24,35 @@ a:hover {
 .content {
     margin: 0px;
 }
-/*
+
+#loading-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#loading-page .spinner-border{
+    align-self: center;
+    margin: auto;
+}
+    /*
 
     Error Msg
 
 */
-#blazor-error-ui {
-    background: lightyellow;
-    bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
-    display: none;
-    left: 0;
-    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-}
+    #blazor-error-ui {
+        background: lightyellow;
+        bottom: 0;
+        box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+        display: none;
+        left: 0;
+        padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
 
     #blazor-error-ui .dismiss {
         cursor: pointer;
@@ -326,12 +339,12 @@ a:hover {
     border: 1px solid #e9ecef;
 }
 
-.s-content:not(.in-view) .skill-indicator {
+.lazy-skillbar:not(.in-view) .skill-indicator {
     width: 0% !important;
     border: none;
 }
 
-.s-content:not(.in-view) .skill-dial{
+.lazy-skillbar:not(.in-view) .skill-dial {
     left: 1px !important;
 }
 
@@ -381,21 +394,20 @@ a:hover {
     position: relative;
 }
 
-.s-content.in-view .skill-bar {
+.lazy-skillbar.in-view .skill-bar {
     width: 100%;
     height: 16px;
     border-radius: 10px;
     border: 2px solid #41464c;
 }
 
-.s-content.in-view .skill-indicator {
+.lazy-skillbar.in-view .skill-indicator {
     height: 12px;
     background: #4bc066;
     position: absolute;
     top: 2px;
-    left: 1px;
+    left: 2px;
     border-radius: 10px;
-    border: 2px solid #e9ecef;
     transition: width 1s ease-out;
 }
 
@@ -442,6 +454,23 @@ a:hover {
 
 #skills .section-subheading {
     text-align: left;
+}
+
+#skills .sm-img {
+    background-color: #343a40 !important;
+    border: 3px solid #343a40;
+}
+
+.pill {
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 3px;
+    background: #343a40;
+    color: white;
+    font-weight: 300;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 /*
 
@@ -534,6 +563,18 @@ a:hover {
         text-align: center;
     }
 
+    .col-30-70 > :last-child {
+        width: 100%;
+    }
+
+    #skills .col-30-70 > :first-child {
+        padding-bottom: 0px;
+    }
+
+    #skills .col-30-70 > :last-child {
+        padding-top: 0px;
+    }
+
     .lazy-img-container.md-img {
         display: block;
         margin: auto;
@@ -545,10 +586,6 @@ a:hover {
 
     #skills .section-subheading{
         text-align: center;
-    }
-
-    .col-30-70 > :last-child {
-        width: 100%;
     }
 
     #contact .col-30-70 > :first-child{
