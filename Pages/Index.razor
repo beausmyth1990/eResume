@@ -22,7 +22,7 @@
 <!-- Header -->
 <div class="section" id="header">
     <div class="s-content header">
-        <BlazorUIComponents.Img.LazyLoad PlaceHolderSrc="@(_imgHost + "header-img-laptop-coffee-compressed.jpg" + _suffix)" LazyLoadSrc="@(_imgHost + "header-img-laptop-coffee.jpg" + _suffix)">
+        <BlazorUIComponents.Img.LazyLoad PlaceHolderSrc="@GetFullImgPath("header-img-compress.jpg")" LazyLoadSrc="@GetFullImgPath("header-img.jpg")">
             <h1 style="margin-bottom: 1em">Beau Smyth</h1>
             <h4>#dev #programmer #livetocode</h4>
         </BlazorUIComponents.Img.LazyLoad>
