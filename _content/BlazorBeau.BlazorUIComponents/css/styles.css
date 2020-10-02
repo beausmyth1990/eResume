@@ -1,0 +1,116 @@
+﻿/* Start Img.LazyLoad */
+.lazy-img-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover !important;
+    filter: blur(8px);
+}
+
+.lazy-img-container.in-view{
+    filter: unset;
+    will-change: opacity, filter;
+    transition: opacity ease-in 1s, filter ease-in 1s;
+}
+
+    /* These elements are not visible in the DOM as they are simply used to load the image source */
+.lazy-img, .lazy-img-placeholder {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+/* End Img.LazyLoad */
+
+/* Start Container.LazyLoad */
+.lazy-container {
+    opacity: 0;
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+    width: 100%;
+    height: auto;
+}
+
+.lazy-container.in-view {
+    opacity: 1;
+    margin-top: unset;
+    will-change: margin-top, opacity;
+    transition: margin-top linear .5s, opacity linear .5s;
+}
+/* End Container.LazyLoad */
+
+/* Start of NavBarResponsive */
+
+.navbar-res {
+    position: fixed;
+    width: 100vw;
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+    z-index: 999;
+    color: white;
+}
+
+.section-in-view a {
+    text-decoration: underline !important;
+    transform: scale(1.2);
+}
+
+.navbar-res ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+.nav-toggle{
+    display: none;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+
+
+@media(max-width: 768px) {
+
+    .navbar-res {
+        width: 50%;
+        max-width: 80%;
+        height: 100vh;
+        box-shadow: 0px 0px 10px 3px #49505740;
+        position: fixed;
+        z-index: 998;
+        background: #21252952;
+        backdrop-filter: blur(6px);
+        right: 0px;
+        top: 0px;
+    }
+
+    .navbar-res ul{
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .nav-toggle{
+        display: block;
+    }
+
+    .navbar-res.hidden {
+        right: -80vw;
+        will-change: right;
+        transition: right ease-in .5s;
+    }
+
+    .navbar-res.inView {
+        display: block;
+        right: 0px;
+        will-change: right;
+        transition: right ease-in .5s;
+    }
+}
+/* End of NavBarResponsive */
+
