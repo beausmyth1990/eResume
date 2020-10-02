@@ -382,7 +382,7 @@ a:hover {
     height: 200px;
     width: 200px;
     border-radius: 10px;
-    background-position: top !important;
+    background-position: center !important;
 }
 
 .lazy-img-container.sm-img {
